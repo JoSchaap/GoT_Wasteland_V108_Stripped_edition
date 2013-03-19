@@ -33,20 +33,6 @@ class playerSettings {
 			w = 0.04; h = 0.04;
 		};
 		
-		class waterIcon : w_RscPicture {
-	  		idc = -1;
-        	text = "client\icons\water.paa";
-        	x = 0.015; y = 0.19;
-			w = 0.05; h = 0.05;
-		};
-		
-		class foodIcon : w_RscPicture {
-      		idc = -1;
-        	text = "client\icons\food.paa";
-        	x = 0.02; y = 0.26;
-			w = 0.04; h = 0.04;
-		};
-		
 		class moneyText : w_RscText {
 			idc = money_text;
 			text = "";
@@ -55,22 +41,6 @@ class playerSettings {
 			w = 0.3; h = 0.05;
 		};
 		
-		class foodText : w_RscText {	
-			idc = food_text;
-			sizeEx = 0.03;
-			text = "";
-			x = 0.06; y = 0.254;
-			w = 0.3; h = 0.05;
-		};
-		
-		class waterText : w_RscText {	
-			idc = water_text;
-			text = "";
-			sizeEx = 0.03;
-			x = 0.06; y = 0.193;
-			w = 0.3; h = 0.05;
-		};
-
 		class distanceText : w_RscText {	
 			idc = view_range_text;
 			text = "View range:";
