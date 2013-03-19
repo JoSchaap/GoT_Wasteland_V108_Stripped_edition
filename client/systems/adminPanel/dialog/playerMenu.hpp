@@ -107,7 +107,7 @@ class PlayersMenu
 	
 	class controls {
 
-		class PlayerEditBox:w_RscEdit
+		class PlayerEditBox: w_RscEdit
 		{
 			idc=playerMenuWarnMessage;
 			x = 0.60 * safezoneW + safezoneX;
