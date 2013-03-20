@@ -1,4 +1,4 @@
-private ["_missionMarkerName","_missionType","_picture","_vehicleName","_hint","_waypoint","_waypoints","_group","_vehicles","_marker","_failed","_startTime","_vehicle","_vehiclePosition","_soldier","_numWaypoints","_ammobox"];
+private ["_missionMarkerName","_missionType","_picture","_vehicleName","_hint","_waypoint","_waypoints","_group","_vehicles","_marker","_failed","_startTime","_numWaypoints","_ammobox","_createVehicle","_leader"];
 
 #include "mainMissionDefines.sqf"
 
@@ -13,50 +13,50 @@ diag_log format["WASTELAND SERVER - Main Mission Resumed: %1", _missionType];
 
 _group = createGroup civilian;
 
-// Add vehicles
-_vehicles = [];
-_vehicles set [0, "B_Hunter_HMG_F" createVehicle [3272.0862, 6818.0166, 4.1839767]];
-_vehicles set [1, "B_Hunter_F" createVehicle [3256.6409, 6823.4746, 3.8003173]];
-_vehicles set [2, "B_Hunter_RCWS_F" createVehicle [3240.3447, 6829.6089, 4.275979]];
-
-{
-    _x setDir 110;
-    _group addVehicle _x;
-    clearMagazineCargoGlobal _x;
-    clearWeaponCargoGlobal _x;
-} forEach _vehicles;
-
-// Soldiers for all vehicles
-{
-    _vehicle = _x;
-    _vehiclePosition = position _vehicle;
+_createVehicle = {
+    private ["_type","_position","_direction","_group","_vehicle","_soldier"];
     
-    _soldier = [_group, _vehiclePosition] call createRandomSoldier; 
+    _type = _this select 0;
+    _position = _this select 1;
+    _direction = _this select 2;
+    _group = _this select 3;
+    
+    _vehicle = _type createVehicle _position;
+    _vehicle setDir _direction;
+    clearMagazineCargoGlobal _vehicle;
+    clearWeaponCargoGlobal _vehicle;
+    _group addVehicle _vehicle;
+    
+    _soldier = [_group, _position] call createRandomSoldier; 
     _soldier moveInDriver _vehicle;
-    _soldier setRank "LIEUTENANT";
-    
-    _soldier = [_group, _vehiclePosition] call createRandomSoldier;
-    
+    _soldier = [_group, _position] call createRandomSoldier; 
+    _soldier moveInCargo [_vehicle, 0];
+    _soldier = [_group, _position] call createRandomSoldier; 
+    _soldier moveInCargo [_vehicle, 1];
+    _soldier = [_group, _position] call createRandomSoldier; 
     if (_vehicle isKindOf "B_Hunter_F") then {
-        _soldier moveInCargo _vehicle;
+        _soldier moveInCargo [_vehicle, 2];
     } else {
         _soldier moveInTurret [_vehicle, [0]];
-        _soldier setRank "SERGEANT";
     };
     
-    _soldier = [_group, _vehiclePosition] call createRandomSoldier; 
-    _soldier moveInCargo _vehicle;
-    
-    _soldier = [_group, _vehiclePosition] call createRandomSoldier;
-    _soldier moveInCargo _vehicle;
-    
-} forEach _vehicles;
+    _vehicle
+};
+
+_vehicles = [];
+_vehicles set [0, ["B_Hunter_HMG_F", [3272.0862, 6818.0166, 4.1839767], 110, _group] call _createVehicle];
+_vehicles set [1, ["B_Hunter_F", [3256.6409, 6823.4746, 3.8003173], 110, _group] call _createVehicle];
+_vehicles set [2, ["B_Hunter_RCWS_F", [3240.3447, 6829.6089, 4.275979], 110, _group] call _createVehicle];
+
+_leader = driver (_vehicles select 0);
+_group selectLeader _leader;
+_leader setRank "LIEUTENANT";
 
 _group setCombatMode "GREEN";
 _group setBehaviour "SAFE";
-_group setSpeedMode "NORMAL";
+_group setFormation "STAG COLUMN";
+_group setSpeedMode "LIMITED";
 
-// Add waypoints
 _waypoints = [
     [4376.2495,6777.9741,129.06226],
     [4093.5972,6355.2212,124.87359],
@@ -82,19 +82,17 @@ _waypoints = [
     _waypoint setWaypointType "MOVE";
     _waypoint setWaypointCompletionRadius 50;
     _waypoint setWaypointCombatMode "GREEN"; // Defensiv behaviour
-    _waypoint setWaypointFormation "COLUMN";
     _waypoint setWaypointBehaviour "SAFE"; // Force convoy to normaly drive on the street.
-    _waypoint setWaypointSpeed "NORMAL";
+    _waypoint setWaypointFormation "STAG COLUMN";
+    _waypoint setWaypointSpeed "LIMITED";
 } forEach _waypoints;
 
-// Create marker
 _marker = createMarker [_missionMarkerName, position leader _group];
 _marker setMarkerType "mil_destroy";
 _marker setMarkerSize [1.25, 1.25];
 _marker setMarkerColor "ColorRed";
 _marker setMarkerText "Convoy";
 
-// Display mission message
 _picture = getText (configFile >> "CfgVehicles" >> "B_Hunter_F" >> "picture");
 _vehicleName = getText (configFile >> "cfgVehicles" >> "B_Hunter_F" >> "displayName");
 _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>Main Objective</t><br/><t align='center' color='%4'>------------------------------</t><br/><t align='center' color='%5' size='1.25'>%1</t><br/><t align='center'><img size='5' image='%2'/></t><br/><t align='center' color='%5'>A <t color='%4'>%3</t> is convoyed by two armored vehicles. Stop them!</t>", _missionType, _picture, _vehicleName, mainMissionColor, subTextColor];
@@ -133,20 +131,15 @@ if(_failed) then
 } else {
     // Mission complete
 
-    // Spawn loot at last marker position
     _ammobox = "Box_NATO_Wps_F" createVehicle getMarkerPos _marker;
     clearMagazineCargoGlobal _ammobox;
     clearWeaponCargoGlobal _ammobox;
-    // TODO: Fine tune and balance loot.
-    // Rocket launchers
     [_ammobox, "launch_NLAW_F", 2] call BIS_fnc_addWeapon;
     [_ammobox, "launch_NLAW_F", 2] call BIS_fnc_addWeapon;
-    // Guns
     [_ammobox, "arifle_TRG21_GL_F", 3] call BIS_fnc_addWeapon;
     [_ammobox, "arifle_TRG21_F", 3] call BIS_fnc_addWeapon;
     [_ammobox, "arifle_MX_SW_F", 3] call BIS_fnc_addWeapon;
     [_ammobox, "arifle_MX_GL_F", 3] call BIS_fnc_addWeapon;
-    // Grenades
     _ammobox addMagazine ["HandGrenade", 5];
     
     _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>Objective Complete</t><br/><t align='center' color='%4'>------------------------------</t><br/><t align='center' color='%5' size='1.25'>%1</t><br/><t align='center'><img size='5' image='%2'/></t><br/><t align='center' color='%5'>The convoy has been sucessfully stopped. Now the weapons and cars are yours.</t>", _missionType, _picture, _vehicleName, successMissionColor, subTextColor];
