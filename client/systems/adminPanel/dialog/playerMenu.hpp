@@ -114,6 +114,11 @@ class PlayersMenu
 			y = 0.745 * safezoneH + safezoneY;
 			w = 0.175 * safezoneW;
 			h = 0.04 * safezoneH;
+			color[] = {1, 1, 1, 1};
+            		colorDisabled[] = {0,0,0,0.3};
+            		colorText[] = {0, 0, 0, 1}; 
+            		colorBackground[] = {1, 1, 1, 1};
+            		colorSelect[] = {1, 0, 0, 1};
 		};
 
 		class PlayerListBox: w_RscListbox
