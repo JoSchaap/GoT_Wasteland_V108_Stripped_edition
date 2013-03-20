@@ -95,6 +95,7 @@ player createDiaryRecord["changelog",
 "1.08(GoT)",
 "
 <br/>
+		[Added] New main mission (Convoy) By Sanjo.<br/>
 		[Fixed] Fixed misc font errors.<br/>
 		[Fixed] one of the weap boxes could not be moved.<br/>
 		[Removed] Food and Drink icons.<br/>
@@ -116,6 +117,8 @@ player createDiaryRecord["404games",
 	Costlyy<br/>
 	Pulse<br/>
 	Domuk<br/>
+	*Sanjo<br/>
+	<br/>*Convoy MainMission<br/>
 "
 ]
 ];
