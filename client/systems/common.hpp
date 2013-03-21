@@ -300,7 +300,7 @@ class w_RscButtonBase {
 	animTextureNormal = "client\ui\ui_button_normal_ca.paa";
 	animTextureDisabled = "client\ui\ui_button_disabled_ca.paa";
 	animTextureOver = "client\ui\ui_button_over_ca.paa";
-	animTextureFocused = "client\ui\ui_button_focus_ca.01.paa";
+	animTextureFocused = "client\ui\ui_button_down_ca.paa";
 	animTexturePressed = "client\ui\ui_button_down_ca.paa";
 	animTextureDefault = "client\ui\ui_button_default_ca.paa";
 	textureNoShortcut = "";

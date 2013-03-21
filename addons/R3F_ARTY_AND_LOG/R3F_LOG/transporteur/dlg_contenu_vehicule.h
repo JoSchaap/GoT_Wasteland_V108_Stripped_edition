@@ -1,5 +1,5 @@
 /**
- * Interface d'affichage du contenu du véhicule
+ * Interface d'affichage du contenu du vï¿½hicule
  * 
  * Copyright (C) 2010 madbull ~R3F~
  * 
@@ -30,7 +30,7 @@ class R3F_LOG_dlg_contenu_vehicule
 		R3F_LOG_dlg_CV_btn_fermer
 	};
 	
-	// Définition des classes de base
+	// Dï¿½finition des classes de base
 	class R3F_LOG_dlg_CV_texte
 	{
 		idc = -1;
@@ -99,7 +99,7 @@ class R3F_LOG_dlg_contenu_vehicule
 		animTextureNormal = "client\ui\ui_button_normal_ca.paa";
 		animTextureDisabled = "client\ui\ui_button_disabled_ca.paa";
 		animTextureOver = "client\ui\ui_button_over_ca.paa";
-		animTextureFocused = "client\ui\ui_button_focus_ca.01.paa";
+		animTextureFocused = "client\ui\ui_button_down_ca.paa";
 		animTexturePressed = "client\ui\ui_button_down_ca.paa";
 		animTextureDefault = "client\ui\ui_button_default_ca.paa";
 		period = 0.4;
@@ -168,7 +168,7 @@ class R3F_LOG_dlg_contenu_vehicule
 			border = "client\ui\ui_border_scroll_ca.paa";
 		};
 	};
-	// FIN Définition des classes de base
+	// FIN Dï¿½finition des classes de base
 	
 	
 	class R3F_LOG_dlg_CV_arriere_plan
