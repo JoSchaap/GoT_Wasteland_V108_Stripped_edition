@@ -92,9 +92,10 @@ player createDiaryRecord["changelog",
 
 player createDiaryRecord["changelog",
 [
-"1.08(GoT)",
+"1.08b(GoT)",
 "
 <br/>
+		(revision: a)<br/>
 		[Added] New main mission (Convoy) By Sanjo.<br/>
 		[Fixed] Fixed misc font errors.<br/>
 		[Fixed] one of the weap boxes could not be moved.<br/>
@@ -102,7 +103,11 @@ player createDiaryRecord["changelog",
 		[Removed] Survival system.<br/>
 		[Removed] All spawning objects (Noone was building bases).<br/>
 		[Changed] Reduced mission file size drasticly.<br/>
-
+		<br/>
+		(revision: b)<br/>
+		[Fixed] Ifrit spawn issue's<br/>
+		[Fixed] Ifrit mission issue's<br>
+		[Changed] Mission from now (v1.08b) DEV-Build only!<br/>
 "
 ]
 ];
