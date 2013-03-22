@@ -9,7 +9,8 @@ diag_log format["WASTELAND SERVER - Started Side Mission State"];
 
 //Side Mission Array
 
-_SMarray = [[mission_WepCache,"mission_WepCache"],      
+_SMarray = [[mission_WepCache,"mission_WepCache"], 
+	[mission_MiniConvoy,"mission_MiniConvoy"],
             [mission_AirWreck,"mission_AirWreck"]];
 
 _lastMission = "nomission";
