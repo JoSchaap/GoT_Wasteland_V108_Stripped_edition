@@ -107,7 +107,13 @@ player createDiaryRecord["changelog",
 		(revision: b)<br/>
 		[Fixed] Ifrit spawn issue's<br/>
 		[Fixed] Ifrit mission issue's<br>
-		[Changed] Mission from now (v1.08b) DEV-Build only!<br/>
+		[Info] Ifrits might not work in Stable Arma3 build atm!<br/>
+		<br/>
+		(revision: c)<br/>
+		[Added] MiniConvoy Sidemission (Based on Sanjo's Convoy)<br/>
+		[Fixed] Vehicle content window missing an image/icon<br/>
+		[Fixed] Admin-Provinggrounds missing an image/icon<br>
+		<br/>
 "
 ]
 ];

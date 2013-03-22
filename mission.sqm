@@ -23,7 +23,7 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="Wasteland v1.08b [Stripped] (GoT/JoSchaap)";
+		briefingName="Wasteland v1.08c [Stripped] (GoT/JoSchaap)";
 		briefingDescription="GoT (Stripped/Minimal edition) Wasteland Survival Sandbox - By: 404Games.co.uk and JoSchaap - Also visit: got2dayz.nl or fb.me/got2dayz";
 		resistanceWest=0;
 		startWeather=0.10000001;
