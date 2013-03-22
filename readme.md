@@ -1,14 +1,15 @@
 GoT Wasteland for Arma3 (alpha) - Stripped to the bone edition!
 -----------------------------------------------
 
-*Current version: v1.08b 
-(WARNING! Arma3 DEV-Build only!)
+*Current version: v1.08c 
+(NOTICE! Arma3 Stable-Build might have issues spawning ifrits due to classname changes!)
 
 - no base building objects
 - alot of unused files removed
 - PBO weighs only 979KB!
 - Convoy Mission (Sanjo)
 - Armored Vehicle Mission
+- MiniConvoy Side mission
 - Nighttime
 - No survivalsystem (wasnt active/usable anyway)
 
