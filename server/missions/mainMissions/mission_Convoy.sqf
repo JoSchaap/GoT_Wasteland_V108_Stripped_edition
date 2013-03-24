@@ -133,13 +133,8 @@ if(_failed) then
 
     _ammobox = "Box_NATO_Wps_F" createVehicle getMarkerPos _marker;
     clearMagazineCargoGlobal _ammobox;
-    clearWeaponCargoGlobal _ammobox;
-    [_ammobox, "launch_NLAW_F", 2] call BIS_fnc_addWeapon;
-    [_ammobox, "launch_NLAW_F", 2] call BIS_fnc_addWeapon;
-    [_ammobox, "arifle_TRG21_GL_F", 3] call BIS_fnc_addWeapon;
-    [_ammobox, "arifle_TRG21_F", 3] call BIS_fnc_addWeapon;
-    [_ammobox, "arifle_MX_SW_F", 3] call BIS_fnc_addWeapon;
-    [_ammobox, "arifle_MX_GL_F", 3] call BIS_fnc_addWeapon;
+    clearWeaponCargoGlobal _ammobox; 
+    [_ammobox,"mission_Side_USSpecial"] call fn_refillbox;
     _ammobox addMagazine ["HandGrenade", 5];
     
     _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>Objective Complete</t><br/><t align='center' color='%4'>------------------------------</t><br/><t align='center' color='%5' size='1.25'>%1</t><br/><t align='center'><img size='5' image='%2'/></t><br/><t align='center' color='%5'>The convoy has been sucessfully stopped. Now the weapons and cars are yours.</t>", _missionType, _picture, _vehicleName, successMissionColor, subTextColor];
