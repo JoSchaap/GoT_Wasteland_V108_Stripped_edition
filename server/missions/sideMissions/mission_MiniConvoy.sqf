@@ -122,7 +122,9 @@ if(_failed) then
 } else {
     // Mission complete
 
-    _ammobox = createVehicle ["Box_NATO_WpsSpecial_F",[(_randomPos select 0), (_randomPos select 1) - 10,0],[], 0, "NONE"];
+    _ammobox = "Box_NATO_Wps_F" createVehicle getMarkerPos _marker;
+    clearMagazineCargoGlobal _ammobox;
+    clearWeaponCargoGlobal _ammobox; 
     [_ammobox,"mission_Side_USSpecial"] call fn_refillbox;
     _ammobox addMagazine ["HandGrenade", 2];
     
