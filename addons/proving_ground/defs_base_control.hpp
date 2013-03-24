@@ -257,7 +257,7 @@
 		y = 0.1; h = 0.8;
 		colorText[] = {1, 1, 1, 1};
 		colorBackground[] = {0,0,0,0};
-		text = "\ca\ui\data\ui_gameoptions_background_ca.paa";
+		text = "";
 		font = "TahomaB";
 		sizeEx = 0.032;
 	};
