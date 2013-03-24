@@ -1,13 +1,3 @@
-/**
- * Interface d'affichage du contenu du v�hicule
- * 
- * Copyright (C) 2010 madbull ~R3F~
- * 
- * This program is free software under the terms of the GNU General Public License version 3.
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 #include "dlg_constantes.h"
 
 class R3F_LOG_dlg_contenu_vehicule
@@ -180,7 +170,7 @@ class R3F_LOG_dlg_contenu_vehicule
 		y = 0.1; h = 0.8;
 		colorText[] = {1, 1, 1, 1};
 		colorBackground[] = {0,0,0,0};
-		text = "\ca\ui\data\ui_gameoptions_background_ca.paa";
+		text = "";
 		font = "TahomaB";
 		sizeEx = 0.032;
 	};
