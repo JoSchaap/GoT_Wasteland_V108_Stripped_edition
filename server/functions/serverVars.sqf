@@ -40,10 +40,10 @@ currentStaticHelis = []; // Storage for the heli marker numbers so that we don't
 civilianVehicles = ["c_offroad","B_Quadbike_F", "O_Quadbike_F"];
 
 //Military Vehicle List - Random Spawns
-militaryVehicles = ["c_offroad","O_Ifrit_F","B_Hunter_F"];
+militaryVehicles = ["c_offroad","O_Galkin_F","B_Hunter_F"];
 
 //Armed Military Vehicle List - Random Spawns
-armedMilitaryVehicles = ["B_Hunter_F","O_Ifrit_F"];
+armedMilitaryVehicles = ["B_Hunter_F","O_Galkin_F"];
                             
 //Object List - Random Spawns.
 staticWeaponsList = ["B_MK6"];
