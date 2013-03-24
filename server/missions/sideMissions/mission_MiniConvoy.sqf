@@ -49,24 +49,24 @@ _group setFormation "STAG COLUMN";
 _group setSpeedMode "LIMITED";
 
 _waypoints = [
-    [4376.2495,6777.9741,129.06226],
-    [4093.5972,6355.2212,124.87359],
-    [4795.2671,6547.9424,122.12956],
-    [4989.0015,6177.1587,157.54677],
-    [4650.4116,5920.8677,140.14188],
-    [5209.6572,5804.0298,159.34062],
-    [5355.2534,5447.2158,172.12018],
-    [5179.1089,5317.814,190.49104],
-    [5332.6191,4984.7158,205.06071],
-    [5034.1582,4551.7168,178.10799],
-    [4453.8467,4265.6416,192.45946],
-    [4256.2026,3987.7041,203.7189],
-    [4278.4458,3617.1807,216.10374],
-    [3811.5823,3352.3765,168.52522],
-    [3782.2229,2991.4355,163.68361],
-    [2796.7263,1814.6265,150.85146],
-    [3121.2034,1679.9956,107.86488],
     [2620.1548,612.56152,64.304039]
+    [3121.2034,1679.9956,107.86488],
+    [2796.7263,1814.6265,150.85146],
+    [3782.2229,2991.4355,163.68361],
+    [3811.5823,3352.3765,168.52522],
+    [4278.4458,3617.1807,216.10374],
+    [4256.2026,3987.7041,203.7189],
+    [4453.8467,4265.6416,192.45946],
+    [5034.1582,4551.7168,178.10799],
+    [5332.6191,4984.7158,205.06071],
+    [5179.1089,5317.814,190.49104],
+    [5355.2534,5447.2158,172.12018],
+    [5209.6572,5804.0298,159.34062],
+    [4650.4116,5920.8677,140.14188],
+    [4989.0015,6177.1587,157.54677],
+    [4795.2671,6547.9424,122.12956],
+    [4093.5972,6355.2212,124.87359],
+    [4376.2495,6777.9741,129.06226]
 ];
 {
     _waypoint = _group addWaypoint [_x, 0];
@@ -122,15 +122,8 @@ if(_failed) then
 } else {
     // Mission complete
 
-    _ammobox = "Box_NATO_Wps_F" createVehicle getMarkerPos _marker;
-    clearMagazineCargoGlobal _ammobox;
-    clearWeaponCargoGlobal _ammobox;
-    [_ammobox, "launch_NLAW_F", 1] call BIS_fnc_addWeapon;
-    [_ammobox, "launch_NLAW_F", 1] call BIS_fnc_addWeapon;
-    [_ammobox, "arifle_TRG21_GL_F", 1] call BIS_fnc_addWeapon;
-    [_ammobox, "arifle_TRG21_F", 1] call BIS_fnc_addWeapon;
-    [_ammobox, "arifle_MX_SW_F", 1] call BIS_fnc_addWeapon;
-    [_ammobox, "arifle_MX_GL_F", 1] call BIS_fnc_addWeapon;
+    _ammobox = createVehicle ["Box_NATO_WpsSpecial_F",[(_randomPos select 0), (_randomPos select 1) - 10,0],[], 0, "NONE"];
+    [_ammobox,"mission_Side_USSpecial"] call fn_refillbox;
     _ammobox addMagazine ["HandGrenade", 2];
     
     _hint = parseText format ["<t align='center' color='%4' shadow='2' size='1.75'>Objective Complete</t><br/><t align='center' color='%4'>------------------------------</t><br/><t align='center' color='%5' size='1.25'>%1</t><br/><t align='center'><img size='5' image='%2'/></t><br/><t align='center' color='%5'>The convoy has been sucessfully stopped. Now the weapons and cars are yours.</t>", _missionType, _picture, _vehicleName, successMissionColor, subTextColor];
