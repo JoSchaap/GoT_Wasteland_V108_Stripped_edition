@@ -43,7 +43,7 @@ class balca_loader_main
 		y = safezoneY; h = display_height/2;
 		colorText[] = {1, 1, 1, 1};
 		colorBackground[] = {0,0,0,0};
-		text = "\ca\ui\data\ui_gameoptions_background_ca.paa";
+		text = "";
 		font = "TahomaB";
 		sizeEx = 0.032;
 	};
@@ -57,7 +57,7 @@ class balca_loader_main
 		y = display_height/2+border_offsetY; h = display_height/2;
 		colorText[] = {1, 1, 1, 1};
 		colorBackground[] = {0,0,0,0};
-		text = "\ca\ui\data\ui_gameoptions_background_ca.paa";
+		text = "";
 		font = "TahomaB";
 		sizeEx = 0.032;
 	};
@@ -224,7 +224,7 @@ class balca_loader_main
 		y = 0.1; h = 0.8;
 		colorText[] = {1, 1, 1, 1};
 		colorBackground[] = {0,0,0,0};
-		text = "\ca\ui\data\ui_gameoptions_background_ca.paa";
+		text = "";
 		font = "TahomaB";
 		sizeEx = 0.032;
 	};
