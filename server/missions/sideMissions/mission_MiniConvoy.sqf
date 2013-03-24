@@ -35,9 +35,9 @@ _createVehicle = {
 };
 
 _vehicles = [];
-_vehicles set [0, ["c_offroad", [3272.0862, 6818.0166, 4.1839767], 110, _group] call _createVehicle];
-_vehicles set [1, ["B_Quadbike_F", [3256.6409, 6823.4746, 3.8003173], 110, _group] call _createVehicle];
-_vehicles set [2, ["O_Quadbike_F", [3240.3447, 6829.6089, 4.275979], 110, _group] call _createVehicle];
+_vehicles set [0, ["c_offroad", [2614.0962, 623.4976, 64.137111], 110, _group] call _createVehicle];
+_vehicles set [1, ["B_Quadbike_F", [2619.0709, 613.5274, 64.271773], 110, _group] call _createVehicle];
+_vehicles set [2, ["O_Quadbike_F", [2607.2347, 627.8529, 63.935479], 110, _group] call _createVehicle];
 
 _leader = driver (_vehicles select 0);
 _group selectLeader _leader;
