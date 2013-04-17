@@ -1,10 +1,3 @@
-
-//	@file Version: 1.0
-//	@file Name: playerSetup.sqf
-//	@file Author: [404] Deadbeat
-//	@file Created: 20/11/2012 05:19
-//	@file Args:
-
 _player = _this;
 //Player initialization
 _player setskill 0;
@@ -85,5 +78,5 @@ _player setVariable["camonet",0,false];
 
 [] execVM "client\functions\playerActions.sqf";
 
-_player groupChat format["GoT2DayZ finished initializing your character"];
+_player groupChat format["GoT Wasteland (Stripped-Edition) Initialization Complete"];
 playerSetupComplete = true;

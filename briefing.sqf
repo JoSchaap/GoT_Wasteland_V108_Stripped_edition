@@ -1,13 +1,12 @@
 waitUntil {!isNull player && isPlayer player};
 
-player createDiarySubject ["404games", "404Games Information"];
-player createDiarySubject ["changelog", "404Games Change Log"];
-player createDiarySubject ["wasteland", "What is Wasteland?"];
-player createDiarySubject ["GoT2DayZ", "GoT2DayZ Information"];
+player createDiarySubject ["404games", "404 Info"];
+player createDiarySubject ["changelog", "Changelog"];
+player createDiarySubject ["GoT2DayZ", "GoT2DayZ Info"];
 
 player createDiaryRecord["changelog",
 [
-"1.01",
+"1.01(404)",
 "
 <br/>
 		[Fixed] - Gun Stores<br/>
@@ -20,7 +19,7 @@ player createDiaryRecord["changelog",
 
 player createDiaryRecord["changelog",
 [
-"1.02",
+"1.02(404)",
 "
 <br/>
 		[Fixed] - Respawning Vehicles<br/>
@@ -31,7 +30,7 @@ player createDiaryRecord["changelog",
 
 player createDiaryRecord["changelog",
 [
-"1.03",
+"1.03(404)",
 "
 <br/>
 		[Added] - Light Armed Vehicle Mission (All armed cars).<br/>
@@ -42,7 +41,7 @@ player createDiaryRecord["changelog",
 
 player createDiaryRecord["changelog",
 [
-"1.05",
+"1.05(404)",
 "
 <br/>
 		[Added] Uniforms,Hats and Vests to the gunstore.<br/>
@@ -59,7 +58,7 @@ player createDiaryRecord["changelog",
 
 player createDiaryRecord["changelog",
 [
-"1.06",
+"1.06(404)",
 "
 <br/>
 		[Fixed] Fix to make Ammo boxes moveable.(thanks to meat147).<br/>
@@ -78,41 +77,46 @@ player createDiaryRecord["changelog",
 		[Fixed] Fixed the Sound Counter error on first spawn.<br/>
 		[Fixed] Re-Added the LightArmed-Vehicle mission.<br/>
 		[Fixed] Fixed the description issue for the LightArmed-Vehicle mission.<br/>
-		[Removed] Food and Drink from player starting loadout (not needed).<br/>
-		[Removed] Empty Fuel can from player starting loadout (not needed).<br/>
-		[Removed] Scaffolding and other useless objectspawns to improve ability to build bases.<br/>
 		[Changed] Starting money to 200.<br/>
-		[Changed] Stringtables and content of existing code.<br/>
-		[Changed] Reduced mission filesize to enhance joining speed.<br/>
 		[Changed] Added our own strings and some other changes.<br/>
-
 "
 ]
 ];
 
 player createDiaryRecord["changelog",
 [
-"1.08b(GoT)",
+"1.08d(GoT)",
 "
 <br/>
-		(revision: a)<br/>
+		*Revision:a*<br/>
 		[Added] New main mission (Convoy) By Sanjo.<br/>
+		[Added] MiniConvoy Sidemission (JoSchaap) Tnx Sanjo<br/>
 		[Fixed] Fixed misc font errors.<br/>
 		[Fixed] one of the weap boxes could not be moved.<br/>
-		[Removed] Food and Drink icons.<br/>
-		[Removed] Survival system.<br/>
-		[Removed] All spawning objects (Noone was building bases).<br/>
-		[Changed] Reduced mission file size drasticly.<br/>
-		<br/>
-		(revision: b)<br/>
-		[Fixed] Ifrit spawn issue's<br/>
-		[Fixed] Ifrit mission issue's<br>
-		[Info] Ifrits might not work in Stable Arma3 build atm!<br/>
-		<br/>
-		(revision: c)<br/>
-		[Added] MiniConvoy Sidemission (Based on Sanjo's Convoy)<br/>
+		[Fixed] Ifrit spawn and mission issue's<br/>
 		[Fixed] Vehicle content window missing an image/icon<br/>
 		[Fixed] Admin-Provinggrounds missing an image/icon<br>
+		<br/>
+		*Revision:b*<br/>
+		[Added] 20mm and 40mm flare rounds to Gunstore<br/>
+		[Fixed] Font errors on some rare occasions<br/>
+		[Fixed] Desync issues<br/>
+		[Fixed] Typo's in stringtables<br/>
+		<br/>
+		*Revision:d (c was skipped intentionally)<br/>
+		[Added] Different reward crate contents for the convoys<br/>
+		[Added] Sanjo's mission select (prevents recurring missions)<br/>
+		[Added] Mission intel and author info to the splash screen<br/>
+		[Added] Gunstore radars are back!<br/>
+		[Added] New side mission Hostile Helicopter<br/>
+		[Added] New main mission Hostile Helicopter-Squad<br/>
+		[Changed] Weapon and item prizes in the gunstore<br/>
+		[Changed] death sequence when killed<br/>
+		[Changed] Enabled groups in Blufor/Opfor <br/>
+		[Fixed] Flare rounds in gunstore not possible to buy<br/>
+		[Fixed] AI and Vehicles from convoy missions not despawning<br/>
+		[Fixed] Slow respawn dialog on first spawn<br/>
+		[Removed] Some more GoT2DayZ.nl references where removed<br/>
 		<br/>
 "
 ]
@@ -128,8 +132,14 @@ player createDiaryRecord["404games",
 	Costlyy<br/>
 	Pulse<br/>
 	Domuk<br/>
-	*Sanjo<br/>
-	<br/>*Convoy MainMission<br/>
+	<br/>
+	Others:<br/>
+	Sanjo (GitHub)<br/>
+	*Mission-Selector<br/>
+	*Convoy MainMission<br/><br/>
+	Tonic-_- (BIS-forums)<br/>
+	*helped disabling r3f on mapbound items<br/>
+	<br/>
 "
 ]
 ];
@@ -139,17 +149,19 @@ player createDiaryRecord["GoT2DayZ",
 "Who what where?",
 "
 <br/>
-	What is GoT2DayZ and why are you hosting Arma3?<br/><br/>
-	GoT2DayZ was initially founded as a player-base for the dutch Tweakers.NET Community<br/>
-	However as time passed on we also started playing wasteland on arma2.<br/>
-	Now with arma3 also having wasteland, we run 3 publics and 1 private server.<br/>
-	<br/><br/>
-	* DayZ Chernarus (Private/Passworded) with safezone<br/>
+	What is GoT/GoT2DayZ?<br/><br/>
+	GoT2DayZ started as a DayZ community for Tweakers.Net<br/>
+	As time passed on we also started playing wasteland.<br/>
+	Now we run some public servers.<br/>
+	And also modify Wasteland missions for them.<br/>
+	<br/>Our website: www.got2dayz.nl<br/><br>
+	our servers:<br/>
 	* DayZ Celle (Whitelisted)<br/>
 	* ArmA2 Wasteland on Utes (Customized by us)<br/>
 	* ArmA3 Alpha Wasteland on Stratis (Costomized by us)<br/>
 	<br/>
-	I cant urge enough that all credits for this mission go to the original makers at 404Games!<br/>
+	I cant urge enough that all credits for this mission go<br/>
+	to the original makers at 404Games.co.uk!<br/>
 	<br/>
 "
 ]
@@ -157,19 +169,10 @@ player createDiaryRecord["GoT2DayZ",
 
 player createDiaryRecord["GoT2DayZ",
 [
-"Contact an Admin",
+"Contact Admin",
 "
 <br/>
-	We currently have one active admin in A3 (we hope to add more soon):<br/><br/>
-	- JoSchaap<br/>
-	You can contact admins through different ways.<br/>
-	<br/>
-	 1) Join our Teamspeak channel on teamspeak.gotlike.nl -> Arma3.<br/>
-	 2) Leave a message on our chat on www.got2dayz.nl<br/>
-	 3) Send us a private message on facebook: fb/me/GoT2DayZ<br/>
-	<br/>
-	NOTICE! The server may crash unexpectedly (No message recieved) <br/>
-	If this happens it will autorestart and be back within 10 seconds! <br/>
+	The Server Hoster can provide admin info here! <br/>
 
 "
 ]
@@ -180,9 +183,11 @@ player createDiaryRecord["GoT2DayZ",
 "Credits",
 "
 <br/>
-	Hosting and mod editting:<br/><br/>
-	JoSchaap<br/>
-	Anyone who files issues or pull requests on the GiT's<br/>
+	Wasteland Middion edit-credits:<br/><br/>
+	-JoSchaap<br/>
+	-Sanjo<br/>
+	-Tonic-_-<br/>
+	-Anyone who files issues or pull requests on the GiT's<br/>
 "
 ]
 ];
