@@ -23,21 +23,21 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="Wasteland v1.08c [Stripped] (GoT/JoSchaap)";
-		briefingDescription="GoT (Stripped/Minimal edition) Wasteland Survival Sandbox - By: 404Games.co.uk and JoSchaap - Also visit: got2dayz.nl or fb.me/got2dayz";
+		briefingName="GoT Wasteland v1.08(d)Stripped (GoT/JoSchaap)";
+		briefingDescription="GoT (Stripped-Edition) Wasteland Sandbox without survival or basebuilding - Originally by: 404Games.co.uk - modded by: JoSchaap - Mission Source+DL at: github.com/JoSchaap";
 		resistanceWest=0;
-		startWeather=0.10000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
+		startWeather=0.40000001;
+		startWind=0.3;
+		startWaves=0.4;
+		forecastWeather=0.90000001;
+		forecastWind=0.7;
+		forecastWaves=0.9;
+		forecastLightnings=0.5;
 		year=2035;
-		month=7;
-		day=6;
-		hour=18;
-		minute=15;
+		month=9;
+		day=25;
+		hour=16;
+		minute=00;
 	};
 	class Groups
 	{
@@ -2221,18 +2221,18 @@ class Intro
 	class Intel
 	{
 		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
+		startWeather=0.40000001;
+		startWind=0.3;
+		startWaves=0.4;
+		forecastWeather=0.90000001;
+		forecastWind=0.7;
+		forecastWaves=0.9;
+		forecastLightnings=0.5;
 		year=2035;
-		month=7;
-		day=6;
-		hour=18;
-		minute=15;
+		month=9;
+		day=25;
+		hour=16;
+		minute=00;
 	};
 };
 class OutroWin
@@ -2249,18 +2249,18 @@ class OutroWin
 	class Intel
 	{
 		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
+		startWeather=0.40000001;
+		startWind=0.3;
+		startWaves=0.4;
+		forecastWeather=0.90000001;
+		forecastWind=0.7;
+		forecastWaves=0.9;
+		forecastLightnings=0.5;
 		year=2035;
-		month=7;
-		day=6;
-		hour=18;
-		minute=15;
+		month=9;
+		day=25;
+		hour=16;
+		minute=00;
 	};
 };
 class OutroLoose
@@ -2277,17 +2277,17 @@ class OutroLoose
 	class Intel
 	{
 		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
+		startWeather=0.40000001;
+		startWind=0.3;
+		startWaves=0.4;
+		forecastWeather=0.90000001;
+		forecastWind=0.7;
+		forecastWaves=0.9;
+		forecastLightnings=0.5;
 		year=2035;
-		month=7;
-		day=6;
-		hour=18;
-		minute=15;
+		month=9;
+		day=25;
+		hour=16;
+		minute=00;
 	};
 };

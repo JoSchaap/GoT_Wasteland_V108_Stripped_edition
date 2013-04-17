@@ -1,9 +1,3 @@
-//	@file Version: 1.0
-//	@file Name: onRespawn.sqf
-//	@file Author: [404] Deadbeat
-//	@file Created: 20/11/2012 05:19
-//	@file Args:
-
 private["_player","_corpse","_town","_spawn","_temp"];
 playerSetupComplete = false;
 

@@ -1,9 +1,3 @@
-//	@file Version: 1.0
-//	@file Name: onKilled.sqf
-//	@file Author: [404] Deadbeat
-//	@file Created: 20/11/2012 05:19
-//	@file Args:
-
 _player = (_this select 0) select 0;
 _killer = (_this select 0) select 1;
 if(isnil {_player getVariable "cmoney"}) then {_player setVariable["cmoney",0,true];};
@@ -72,21 +66,6 @@ if((_player getVariable "cmoney") > 0) then {
 	_to_delete = _to_delete + [_m];
 };
 
-if((_player getVariable "medkits") > 0) then {
-	for "_a" from 1 to (_player getVariable "medkits") do {	
-		_m = "CZ_VestPouch_EP1" createVehicle (position _player);
-		_to_delete = _to_delete + [_m];
-	};
-};
-
-if((_player getVariable "repairkits") > 0) then {
-	for "_b" from 1 to (_player getVariable "repairkits") do {	
-		_m = "Suitcase" createVehicle (position _player);
-		_to_delete = _to_delete + [_m];
-	};
-};
-
 true spawn {
 	waitUntil {playerRespawnTime < 2};
-	titleText ["", "BLACK OUT", 1];
 };
