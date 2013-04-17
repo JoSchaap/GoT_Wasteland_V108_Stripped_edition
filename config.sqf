@@ -1,9 +1,22 @@
+//	@file Version: 1.1
+//	@file Name: config.sqf
+//	@file Author: [404] Deadbeat, [404] Costlyy, [GoT] JoSchaap
+//	@file Created: 20/11/2012 05:13
+//	@file Description: Main config.
+
+// --------------------------------------------------------------------------------------------------- \\
+// ----------  !DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING!	---------- \\
+// ----------																				---------- \\
+// ----------			404Games are not responsible for anything that may happen 			---------- \\
+// ----------			 as a result of unauthorised modifications to this file.			---------- \\
+// --------------------------------------------------------------------------------------------------- \\
+                                                                                                
 //Gunstore Weapon List - Gun Store Base List
 // Text name, classname, buy cost, sell amount
 weaponsArray = [
 		//Handgun
-	["P07","hgun_P07_F",40,20],
-    ["Rook-40","hgun_Rook40_F",40,20], 
+	["P07","hgun_P07_F",40,45],
+    ["Rook-40","hgun_Rook40_F",40,45], 
     	//Underwater Gun
 	["SDAR","arifle_SDAR_F",100,50],
     	//Assault Rifle
@@ -32,28 +45,28 @@ weaponsArray = [
 //Text name, classname, buy cost
 ammoArray = [
 	["9mm 16Rnd Mag","16Rnd_9x21_Mag",10],
-	["5.56mm 20Rnd Mag","20Rnd_556x45_UW_mag",10],
-	["7.62mm 20Rnd Mag","20Rnd_762x45_Mag",10],
+	["5.56mm 20Rnd Mag","20Rnd_556x45_UW_mag",15],
+	["7.62mm 20Rnd Mag","20Rnd_762x45_Mag",20],
     ["6.5mm 30Rnd CL Mag","30Rnd_65x39_caseless_mag",30],
     ["6.5mm 30Rnd C Mag","30Rnd_65x39_case_mag",25],
 	["6.5mm 100Rnd Belt","100Rnd_65x39_caseless_mag_Tracer",50],
-	["6.5mm 200Rnd Belt","200Rnd_65x39_cased_Box",10],
-	["GL Flare 40mm (white)","UGL_FlareWhite_F",25],
-	["GL Flare 40mm (green)","UGL_FlareGreen_F",25],
-	["GL Flare 40mm (Red)","UGL_FlareRed_F",25],
-	["GL Flare 40mm (Yellow)","UGL_FlareYellow_F",25],
-	["GL Flare 40mm (Cir)","UGL_FlareCIR_F",25],
+	["6.5mm 200Rnd Belt","200Rnd_65x39_cased_Box",100],
+	["GL Flare 40mm (white)","UGL_FlareWhite_F",45],
+	["GL Flare 40mm (green)","UGL_FlareGreen_F",45],
+	["GL Flare 40mm (Red)","UGL_FlareRed_F",45],
+	["GL Flare 40mm (Yellow)","UGL_FlareYellow_F",45],
+	["GL Flare 40mm (Cir)","UGL_FlareCIR_F",45],
 	["NLAW Missile","NLAW_F",100],
     ["RPG32 Missile","RPG32_F",100],
     ["RPG32 AA Missile","RPG32_AA_F",100],
-	["Explosive Charge","DemoCharge_Remote_Mag",100],
-    ["Explosive Satchel","SatchelCharge_Remote_Mag",100],
-    ["AT Mine","ATMine_Range_Mag",100],
-    ["M6 SLAM Mine","SLAMDirectionalMine_Wire_Mag",100],
-    ["Claymore Charge","ClaymoreDirectionalMine_Remote_Mag",100],
-    ["APERS Mine","APERSMine_Range_Mag",100],
-    ["APERS Bounding Mine","APERSBoundingMine_Range_Mag",100],
-    ["APERS Tripwire Mine","APERSTripMine_Wire_Mag",100]
+	["Explosive Charge","DemoCharge_Remote_Mag",150],
+    ["Explosive Satchel","SatchelCharge_Remote_Mag",150],
+    ["AT Mine","ATMine_Range_Mag",150],
+    ["M6 SLAM Mine","SLAMDirectionalMine_Wire_Mag",150],
+    ["Claymore Charge","ClaymoreDirectionalMine_Remote_Mag",150],
+    ["APERS Mine","APERSMine_Range_Mag",150],
+    ["APERS Bounding Mine","APERSBoundingMine_Range_Mag",150],
+    ["APERS Tripwire Mine","APERSTripMine_Wire_Mag",150]
 ];
 
 //Gun Store Equipment List
@@ -61,18 +74,18 @@ ammoArray = [
 accessoriesArray = [
 	["GPS","ItemGPS", 100,"item"],
 	["Binoculars","Binocular",100,"binoc"],
-	["NV Goggles","NVGoggles",100,"binoc"],
+	["NV Goggles","NVGoggles",100,"item"],
     ["First Aid","FirstAidKit", 100,"item"],
-    ["Medkit","Medikit", 100,"item"],
-    ["Toolkit","ToolKit", 100,"item"],
+    ["Medkit","Medikit", 150,"item"],
+    ["Toolkit","ToolKit", 150,"item"],
   	["Suppressor 9mm","muzzle_snds_L", 100,"item"],
-    ["Suppressor 7.82mm","muzzle_snds_B", 100,"item"],
-    ["Suppressor 6.5mm","muzzle_snds_H", 100,"item"],
-    ["LMG Suppressor 6.5mm","muzzle_snds_H_MG", 100,"item"],
+    ["Suppressor 7.82mm","muzzle_snds_B", 150,"item"],
+    ["Suppressor 6.5mm","muzzle_snds_H", 150,"item"],
+    ["LMG Suppressor 6.5mm","muzzle_snds_H_MG", 150,"item"],
     ["Flash Light","acc_flashlight", 100,"item"],
-    ["RCO Sight","optic_Hamr", 100,"item"],
+    ["RCO Sight","optic_Hamr", 150,"item"],
     ["Holosight","optic_Holosight", 100,"item"],
-    ["ARCO Sight","optic_Arco", 100,"item"],
+    ["ARCO Sight","optic_Arco", 150,"item"],
     ["ACO Sight","optic_Aco", 100,"item"],
     ["Carrier GL Rig (Green)","V_PlateCarrierGL_rgr", 100,"vest"],
     ["Carrier Lite (Coyote)","V_PlateCarrier1_cbr", 100,"vest"],

@@ -7,7 +7,7 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 hitStateVar = false;
-versionName = "v1.08c [Stripped] (GoT/JoSchaap)";
+versionName = "v1.08(d)Stripped (GoT/JoSchaap)";
 
 if(isServer) then { X_Server = true;};
 if(!isDedicated) then { X_Client = true;};
@@ -15,7 +15,7 @@ if(isNull player) then {X_JIP = true;};
 
 true spawn {
 	if(!isDedicated) then {
-		titleText ["Please wait for your player to setup", "BLACK", 0];
+		titleText ["Welcome to GoT Wasteland (Stripped-2-thebone-edition), Have patience please!", "BLACK", 0];
 		waitUntil {player == player};
 		client_initEH = player addEventHandler ["Respawn", {removeAllWeapons (_this select 0);}];
 	};

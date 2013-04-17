@@ -1,9 +1,3 @@
-//	@file Version: 1.0
-//	@file Name: clientCompile.sqf
-//	@file Author: [404] Deadbeat, [404] Costlyy
-//	@file Created: 20/11/2012 05:19
-//	@file Args:
-
 // Event handlers
 onRespawn = compile preprocessfile "client\clientEvents\onRespawn.sqf";
 onKilled = compile preprocessfile "client\clientEvents\onKilled.sqf";
@@ -34,6 +28,6 @@ teamkillMessage = compile preprocessFileLineNumbers "client\functions\showTeamKi
 client_respawnDialog = compile preprocessFileLineNumbers "client\functions\loadRespawnDialog.sqf";
 loadGunStore = compile preprocessFileLineNumbers "client\systems\gunStore\loadGunStore.sqf";
 
-player groupChat "You are ready to play!! Welcome to GoT2DayZ!";
+player groupChat "GoT Wasteland 1.08(D)Stripped - Client Compile Complete";
 sleep 1;
 playerCompiledScripts = true;
