@@ -1,4 +1,4 @@
-GoT_Wasteland-Stratis (Full) v1.08 (Revision:d)
+GoT_Wasteland-Stratis (Stripped-Edition) v1.08 (Revision:d)
 ==================================
 
 All credits for Wasteland go to 404Games and their DEV's
