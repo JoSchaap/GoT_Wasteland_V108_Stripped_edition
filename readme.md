@@ -3,10 +3,10 @@ GoT_Wasteland-Stratis (Full) v1.08 (Revision:d)
 
 All credits for Wasteland go to 404Games and their DEV's
 This is just my alteration.
-
-current status: v1.08(d) (Complete Edition) Fully Functional Wasteland
+<br/>
+current status: v1.08(d) (Complete Edition) Fully Functional Wasteland<br/>
 current status: v1.08(d) (Stripped Edition) No Survivalsystem, no basebuilding
-
+<br/>
 If you are not famillair with creating PBO files, grab the ready-to-go-PBO's here: 
 https://github.com/JoSchaap/Arma3_Binary_PBO
 
